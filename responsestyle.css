@@ -1,0 +1,41 @@
+﻿@import url('https://kit.fontawesome.com/ebd2a6b83a.js');
+body{
+    font-family:Roboto , sans-serif;
+}
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+}
+.sidebar{
+    position:fixed;
+    left:0;
+    width:250px;
+    height:100%;
+   background-color: grey;
+}
+.sidebar header{
+    font-size:22px;
+    color:white;
+    text-align:center;
+    line-height:70px;
+    background: black;
+    user-select: none;
+}
+.sidebar ul a{
+    display:block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+.section {
+    position: absolute;
+    width:90%;
+    height:500px;
+}
