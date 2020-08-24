@@ -42,7 +42,7 @@
         <a class="nav-link" href="homepage.aspx">Home</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Profile</a>
+        <a class="nav-link" href="profile.aspx">Profile</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="services.aspx">Services</a>

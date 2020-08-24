@@ -10,7 +10,7 @@
             </marquee>
     </section>
     <section>
-        <div class="container">
+        <div class="container" aria-disabled="True">
             <div class="row">
                 <div class="col-12">
                     <h2 style="margin-top:25px; text-align:center;">Our features</h2>
@@ -18,7 +18,7 @@
                 </div>
             </div>
              <div class="row">
-                <div class="col-md-4" style="">
+                <div class="col-md-4" style="text-align:center" aria-disabled="True">
                     <img src="Stock/digidata.png" width="150px" style="margin-top:20px; text-align:center;"/>
                     <h4 style="margin-top:15px;">Digital processing</h4>
                     <p class="text-justify">Our company has developed and evaluated its website in such a way that the agents can add the
