@@ -48,16 +48,13 @@
         <a class="nav-link" href="services.aspx">Services</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Our clients</a>
+        <a class="nav-link" href="clients.aspx">Our clients</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">Our branches</a>
+        <a class="nav-link" href="branches.aspx">Our branches</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#">About us</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Contact us</a>
+        <a class="nav-link" href="contact.aspx">Contact us</a>
       </li>
     </ul>
                   <ul class="navbar-nav">

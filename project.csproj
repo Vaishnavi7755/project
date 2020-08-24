@@ -128,6 +128,7 @@
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="branches.aspx" />
     <Content Include="clients.aspx" />
+    <Content Include="contact.aspx" />
     <Content Include="css basic\masterstyle.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
     <Content Include="datatables\js\jquery.dataTables.min.js" />
@@ -1829,6 +1830,13 @@
     </Compile>
     <Compile Include="clients.aspx.designer.cs">
       <DependentUpon>clients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="homepage.aspx.cs">
       <DependentUpon>homepage.aspx</DependentUpon>

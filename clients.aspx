@@ -16,7 +16,7 @@
             </div>
              <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <a href="https://www.godrej.com/"><img src="Stock/godrej.png" width="300px" height:100px; style="margin-top:15px;"/></a>
+                    <a href="https://www.godrej.com/"><img src="Stock/godrej.png" width="300px" height=100px; style="margin-top:15px;"/></a>
                 </div>
                   <div class="col-lg-4 col-md-6 col-sm-12">
                     <a href="https://www.crystalcropprotection.com/"><img src="Stock/crystal.png" width="300px" height="100px" style="margin-top:15px;" /></a>
@@ -49,5 +49,6 @@
                     <a href="https://www.supreme.co.in/"><img src="Stock/supreme.png" width="300px" height="100px" style="margin-top:15px; margin-left:10px;" /></a>
                 </div>
         </div>
+            </div>
     </section>
 </asp:Content>
