@@ -1,20 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="enquiry.aspx.cs" Inherits="project.enquiry" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="addagent.aspx.cs" Inherits="project.addagent" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
+     <div class="container">
         <div class="row">
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-6">
                 <div class="card" style="margin-bottom:10px; margin-top:10px;">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <center><img src="Stock/generaluser.png" width="100px" /></center>
+                                <center><img src="Stock/addagent.png" width="150px" /></center>
                             </div>
                         </div>
                          <div class="row">
                             <div class="col">
-                                <center><h4>User Enquiry Form</h4></center>
+                                <center><h4>Add a new agent</h4>
+                                    </center>
                             </div>
                         </div>
                          <div class="row">
@@ -23,21 +24,37 @@
                             </div>
                         </div>
                          <div class="row">
-                            <div class="col-md-6">
-                               <label>Full Name</label>
+                            <div class="col-md-4">
+                               <label>Agent ID:</label>
                               <div class="form-group">
-                                  <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Full Name">
+                                  <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Agent ID">
                                   </asp:TextBox>
                               </div>
                             </div>
-                             <div class="col-md-6">
-                                <label>Date Of Enquiry</label>
+                             <div class="col-md-8">
+                                <label>Agent name</label>
                               <div class="form-group">
-                                  <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Password" TextMode="Date">
+                                  <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Agent Name">
                                   </asp:TextBox>
                               </div>
                             </div>
                         </div>
+                            <div class="row">
+                             <div class="col-md-6">
+                               <label>License no:</label>
+                              <div class="form-group">
+                                  <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="License no." TextMode="Number">
+                                  </asp:TextBox>
+                              </div>
+                                 </div>
+                              <div class="col-md-6">
+                               <label>Branch Location</label>
+                              <div class="form-group">
+                                  <asp:TextBox CssClass="form-control" ID="TextBox8" runat="server" placeholder="Location">
+                                  </asp:TextBox>
+                              </div>
+                            </div>
+                                </div>
                          <div class="row">
                             <div class="col-md-6">
                                <label>Contact number</label>
@@ -54,6 +71,14 @@
                               </div>
                             </div>
                         </div>
+                         <div class="row">
+                     <div class="col">
+                        <label>Address:</label>
+                        <div class="form-group">
+                           <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Address" TextMode="MultiLine" Rows="2"></asp:TextBox>
+                        </div>
+                     </div>
+                  </div>
                         <div class="row">
                             <div class="col-md-4">
                                <label>State</label>
@@ -106,19 +131,13 @@
                         </div>
                      </div>
                         </div>
-                         <div class="row">
-                     <div class="col">
-                        <label>Enquiry Question:</label>
-                        <div class="form-group">
-                           <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Enquiry" TextMode="MultiLine" Rows="3"></asp:TextBox>
-                        </div>
-                     </div>
-                  </div>
                         <div class="row">
-                            <div class="col">                    
+                            <div class="col-8 mx-auto">
+                                <centre>
                                  <div class="form-group">
-                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Submit" OnClick="Button1_Click" />
+                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Add" />
                               </div>
+                                    </centre>
                             </div>
                         </div>
                     </div>
@@ -126,6 +145,29 @@
                     <a href="homepage.aspx"><< Back to Home</a><br />
                 <br />
             </div>
-        </div>
-    </div>
+
+             <div class="col-md-6">
+                <div class="card" style="margin-bottom:10px; margin-top:10px;">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <center><h4>List of agents</h4>
+                                    </center>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                              <hr>
+                            </div>
+                        </div>
+                          <div class="row">
+                            <div class="col">
+                              <asp:GridView CssClass="table table-striped table-bordered" ID="GridView2" runat="server"></asp:GridView>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+         </div>
 </asp:Content>
