@@ -35,14 +35,14 @@
                                   </asp:TextBox>
                               </div>
                                  <div class="form-group">
-                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Login" />
+                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" OnClick="Button1_Click" Text="Login" />
                               </div>
                                   <div class="form-group">
                                   <a href="enquiry.aspx"><input class="btn btn-info btn-block btn-lg" id="Button2" type="button" value="Enquiry" /></a>
                               </div>
                             </div>
-                        </div>
                     </div>
+                    
                     </div>
                     <a href="homepage.aspx"><< Back to Home</a><br />
                 <br />

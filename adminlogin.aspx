@@ -35,7 +35,7 @@
                                   </asp:TextBox>
                               </div>
                                  <div class="form-group">
-                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Login" />
+                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" OnClick="Button1_Click" Text="Login" />
                               </div>
                             </div>
                         </div>

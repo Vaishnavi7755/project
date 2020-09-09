@@ -30,7 +30,7 @@
                                   <div class="input-group">
                                   <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Agent ID">
                                   </asp:TextBox>
-                                  <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Go" />
+                                  <asp:Button class="btn btn-primary" ID="Button1" runat="server" OnClick="Button1_Click" Text="Go" />
                                   </div>
                               </div>
                             </div>
@@ -46,7 +46,7 @@
                             <div class="col-8 mx-auto">
                                 <centre>
                                  <div class="form-group">
-                                  <asp:Button ID="Button2" CssClass="btn btn-danger btn-block btn-lg" runat="server" Text="Remove" />
+                                  <asp:Button ID="Button2" CssClass="btn btn-danger btn-block btn-lg" runat="server" Text="Remove" OnClick="Button2_Click" />
                               </div>
                                     </centre>
                             </div>

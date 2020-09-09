@@ -1,20 +1,20 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="addagent.aspx.cs" Inherits="project.addagent" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="updateagent.aspx.cs" Inherits="project.updateagent" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-6">
                 <div class="card" style="margin-bottom:10px; margin-top:10px;">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <center><img src="Stock/addagent.png" width="150px" /></center>
+                                <center><img src="Stock/updateuser.png" width="150px" /></center>
                             </div>
                         </div>
                          <div class="row">
                             <div class="col">
-                                <center><h4>Add a new agent</h4>
+                                <center><h4>Update existing agent</h4>
                                     </center>
                             </div>
                         </div>
@@ -29,6 +29,7 @@
                               <div class="form-group">
                                   <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Agent ID">
                                   </asp:TextBox>
+                                  <asp:Button class="btn btn-primary" ID="Button2" runat="server" Text="Go" OnClick="Button2_Click" />
                               </div>
                             </div>
                              <div class="col-md-8">
@@ -135,7 +136,7 @@
                             <div class="col-8 mx-auto">
                                 <centre>
                                  <div class="form-group">
-                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Add" OnClick="Button1_Click" />
+                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Update" OnClick="Button1_Click" />
                               </div>
                                     </centre>
                             </div>
