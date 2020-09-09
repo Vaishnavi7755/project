@@ -15,7 +15,7 @@ namespace project
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GridView2.DataBind();
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -79,6 +79,7 @@ namespace project
                 con.Close();
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Agent Deleted Successfully!')", true);
                 clearForm();
+                GridView2.DataBind();
             }
             catch (Exception ex)
             {

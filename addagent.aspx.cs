@@ -15,7 +15,7 @@ namespace project
         string strcon = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            GridView2.DataBind();
         }
         //add
         protected void Button1_Click(object sender, EventArgs e)
@@ -33,32 +33,40 @@ namespace project
         //user defined function
         void addNewAgent()
         {
-            try
+            if (TextBox1.Text.Trim().Equals(""))
             {
-                SqlConnection con = new SqlConnection(strcon);
-                if (con.State == ConnectionState.Closed)
-                {
-                    con.Open();
-                }
-                SqlCommand cmd = new SqlCommand("insert into agent (agentid,aname,lno,branch,contact,email,address,state,city,pincode) values (@agentid,@name,@lno,@branch,@contactno,@email,@address,@state,@city,@pincode)", con);
-                cmd.Parameters.AddWithValue("@agentid", TextBox1.Text.Trim());
-                cmd.Parameters.AddWithValue("@name", TextBox2.Text.Trim());
-                cmd.Parameters.AddWithValue("@lno", TextBox5.Text.Trim());
-                cmd.Parameters.AddWithValue("@branch", TextBox8.Text.Trim());
-                cmd.Parameters.AddWithValue("@contactno", TextBox3.Text.Trim());
-                cmd.Parameters.AddWithValue("@email", TextBox4.Text.Trim());
-                cmd.Parameters.AddWithValue("@address", TextBox10.Text.Trim());
-                cmd.Parameters.AddWithValue("@state", DropDownList1.SelectedItem.Value);
-                cmd.Parameters.AddWithValue("@city", TextBox6.Text.Trim());
-                cmd.Parameters.AddWithValue("@pincode", TextBox7.Text.Trim());
-                cmd.ExecuteNonQuery();
-                con.Close();
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('New Agent added Successfully!')", true);
-                clearForm();
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Agent ID cannot be blank')", true);
             }
-            catch (Exception ex)
+            else
             {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + ex.Message + "')", true);
+                try
+                {
+                    SqlConnection con = new SqlConnection(strcon);
+                    if (con.State == ConnectionState.Closed)
+                    {
+                        con.Open();
+                    }
+                    SqlCommand cmd = new SqlCommand("insert into agent (agentid,aname,lno,branch,contact,email,address,state,city,pincode) values (@agentid,@name,@lno,@branch,@contactno,@email,@address,@state,@city,@pincode)", con);
+                    cmd.Parameters.AddWithValue("@agentid", TextBox1.Text.Trim());
+                    cmd.Parameters.AddWithValue("@name", TextBox2.Text.Trim());
+                    cmd.Parameters.AddWithValue("@lno", TextBox5.Text.Trim());
+                    cmd.Parameters.AddWithValue("@branch", TextBox8.Text.Trim());
+                    cmd.Parameters.AddWithValue("@contactno", TextBox3.Text.Trim());
+                    cmd.Parameters.AddWithValue("@email", TextBox4.Text.Trim());
+                    cmd.Parameters.AddWithValue("@address", TextBox10.Text.Trim());
+                    cmd.Parameters.AddWithValue("@state", DropDownList1.SelectedItem.Value);
+                    cmd.Parameters.AddWithValue("@city", TextBox6.Text.Trim());
+                    cmd.Parameters.AddWithValue("@pincode", TextBox7.Text.Trim());
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('New Agent added Successfully!')", true);
+                    clearForm();
+                    GridView2.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + ex.Message + "')", true);
+                }
             }
         }
          public bool AgentCheck()

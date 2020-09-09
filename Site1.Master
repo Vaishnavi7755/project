@@ -17,7 +17,10 @@
     <%--bootstrap popper--%>
     <script src="bootstrap/js/popper.min.js"></script>
     <%--bootstrap bootstrap.min.js--%>
-    
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--Datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
     <%-- mastercss--%>
     <link href="css%20basic/masterstyle.css" rel="stylesheet" />
 
@@ -92,7 +95,7 @@
                             &nbsp;
                             <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" OnClick="LinkButton11_Click" Visible="False">Add New Agent </asp:LinkButton>
                              &nbsp;
-                            <asp:LinkButton class="footerlinks" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Visible="False">Updatee Agent  </asp:LinkButton>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" Visible="False">Update Agent  </asp:LinkButton>
                            
                             &nbsp;
                             <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="False">Remove Agent  </asp:LinkButton>

@@ -1,5 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="updateagent.aspx.cs" Inherits="project.updateagent" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+     <script type="text/javascript">
+        $(document).ready(function () {
+
+            //$(document).ready(function () {
+            //$('.table').DataTable();
+            // });
+
+            $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+            //$('.table1').DataTable();
+        });
+         </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
@@ -162,9 +173,27 @@
                             </div>
                         </div>
                           <div class="row">
+                              <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:visualtransportConnectionString %>" SelectCommand="SELECT * FROM [agent]"></asp:SqlDataSource>
                             <div class="col">
-                              <asp:GridView CssClass="table table-striped table-bordered" ID="GridView2" runat="server"></asp:GridView>
+                                 <div style="overflow-x:auto;width:500px">
+                                    <div class="overflow-auto">
+                              <asp:GridView CssClass="table table-striped table-bordered" ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="agentid" DataSourceID="SqlDataSource1" AllowPaging="True">
+                                  <Columns>
+                                      <asp:BoundField DataField="agentid" HeaderText="Agent ID" ReadOnly="True" SortExpression="agentid" />
+                                      <asp:BoundField DataField="aname" HeaderText="Name" SortExpression="aname" />
+                                      <asp:BoundField DataField="lno" HeaderText="License No." SortExpression="lno" />
+                                      <asp:BoundField DataField="branch" HeaderText="Branch" SortExpression="branch" />
+                                      <asp:BoundField DataField="contact" HeaderText="Contact" SortExpression="contact" />
+                                      <asp:BoundField DataField="email" HeaderText="Email" SortExpression="email" />
+                                      <asp:BoundField DataField="address" HeaderText="Address" SortExpression="address" />
+                                      <asp:BoundField DataField="state" HeaderText="State" SortExpression="state" />
+                                      <asp:BoundField DataField="city" HeaderText="City" SortExpression="city" />
+                                      <asp:BoundField DataField="pincode" HeaderText="Pincode" SortExpression="pincode" />
+                                  </Columns>
+                                </asp:GridView>
                             </div>
+                                     </div>
+                                </div>
                         </div>
                         </div>
                     </div>
