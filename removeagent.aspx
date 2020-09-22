@@ -41,15 +41,17 @@
                                   <div class="input-group">
                                   <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Agent ID">
                                   </asp:TextBox>
-                                  <asp:Button class="btn btn-primary" ID="Button1" runat="server" OnClick="Button1_Click" Text="Go" />
+                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="ID cannot be empty" ControlToValidate="TextBox1" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                                  <asp:Button class="btn btn-primary" ID="Button1" runat="server" OnClick="Button1_Click" Text="Go" CausesValidation="False" />
                                   </div>
                               </div>
                             </div>
                              <div class="col-md-8">
                                 <label>Agent name</label>
                               <div class="form-group">
-                                  <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Agent Name">
-                                  </asp:TextBox>
+                                  <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Agent Name" AutoPostBack="True"></asp:TextBox>
+                                   <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Agent name cannot be empty" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="TextBox2" ErrorMessage="Name can only have alphabets in it." ForeColor="Red" ValidationExpression="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" Display="Dynamic"></asp:RegularExpressionValidator>
                               </div>
                             </div>
                         </div>
@@ -57,7 +59,7 @@
                             <div class="col-8 mx-auto">
                                 <centre>
                                  <div class="form-group">
-                                  <asp:Button ID="Button2" CssClass="btn btn-danger btn-block btn-lg" runat="server" Text="Remove" OnClick="Button2_Click" />
+                                  <asp:Button ID="Button2" CssClass="btn btn-danger btn-block btn-lg" runat="server" Text="Remove" OnClick="Button2_Click" CausesValidation="False" />
                               </div>
                                     </centre>
                             </div>

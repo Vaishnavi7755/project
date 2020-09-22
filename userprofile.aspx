@@ -144,7 +144,7 @@
                             <div class="col-8 mx-auto">
                                 <centre>
                                  <div class="form-group">
-                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Update" />
+                                  <asp:Button ID="Button1" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Update" OnClick="Button1_Click" />
                               </div>
                                     </centre>
                             </div>
@@ -183,4 +183,6 @@
             </div>
         </div>
     </div>
+            </div>
+        </div>
 </asp:Content>

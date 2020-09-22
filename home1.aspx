@@ -1,26 +1,37 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="home1.aspx.cs" Inherits="project.home1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<div class="wrapper">
-    <nav id="sidebar"></nav>
-    <div class="sidebar-header">
-        <h3>Menu bar</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-4 mx-auto">
+                <centre>
+                  <div class="form-group">
+                      <a href="consignee.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button1" type="button" value="Add Consignee" style="margin-top:20px;" /></a>
+                  </div>
+                </centre>
+                <centre>
+                  <div class="form-group">
+                      <a href="consignor.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button2" type="button" value="Add Consignor" /></a>
+                  </div>
+                </centre>
+                <centre>
+                  <div class="form-group">
+                      <a href="enquiry.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button3" type="button" value="Add Truck Details" /></a>
+                  </div>
+                </centre>
+                <centre>
+                  <div class="form-group">
+                      <a href="enquiry.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button4" type="button" value="Add Bill" /></a>
+                  </div>
+                </centre>
+                <centre>
+                  <div class="form-group">
+                      <a href="enquiry.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button5" type="button" value="Add Stock Details" /></a>
+                  </div>
+                </centre>
+            </div>
+        </div>
     </div>
-    <div class="sidebar" id="content">
-        <ul class="list-unstyled components">
-            <p>Visual Transport</p>
-            <li class="active"><a href="#" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><i class="fas fa-home fa-2x"></i>  Home</a></li>
-            <li><a href="#"><i class="fas fa-user-circle fa-2x"></i>  Profile</a></li>
-            <li><a href="#"><i class="fas fa-stream fa-2x"></i>  Services</a></li>
-            <li><a href="#"><i class="far fa-address-card fa-2x"></i>  Our Clients</a></li>
-            <li><a href="#"><i class="fas fa-code-branch fa-2x"></i>  Our Branches</a></li>
-            <li><a href="#"><i class="fas fa-info-circle fa-2x"></i>  About us</a></li>
-            <li><a href="#"><i class="fas fa-envelope fa-2x"></i>  Contact us</a></li>
-        </ul>
-    </div>
-    </div>
-    <section class="truck">
-        <img src="Stock/truck.jpg" class="panel" />
-    </section>
 </asp:Content>

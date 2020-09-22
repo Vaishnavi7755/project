@@ -130,6 +130,8 @@
     <Content Include="bootstrap\js\popper.min.js" />
     <Content Include="branches.aspx" />
     <Content Include="clients.aspx" />
+    <Content Include="consignee.aspx" />
+    <Content Include="consignor.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="css basic\masterstyle.css" />
     <Content Include="datatables\css\jquery.dataTables.min.css" />
@@ -1820,10 +1822,12 @@
     <Content Include="Stock\truck2.jpg" />
     <Content Include="Stock\truck3.jpg" />
     <Content Include="Stock\truck31.jpg" />
+    <Content Include="Stock\truckicon.png" />
     <Content Include="Stock\updateuser.png" />
     <Content Include="Stock\usha.png" />
     <Content Include="Stock\visit.png" />
     <Content Include="style.css" />
+    <Content Include="truck.aspx" />
     <Content Include="updateagent.aspx" />
     <Content Include="userlogin.aspx" />
     <Content Include="userprofile.aspx" />
@@ -1858,6 +1862,20 @@
     </Compile>
     <Compile Include="clients.aspx.designer.cs">
       <DependentUpon>clients.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consignee.aspx.cs">
+      <DependentUpon>consignee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consignee.aspx.designer.cs">
+      <DependentUpon>consignee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="consignor.aspx.cs">
+      <DependentUpon>consignor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="consignor.aspx.designer.cs">
+      <DependentUpon>consignor.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -1941,6 +1959,13 @@
     </Compile>
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="truck.aspx.cs">
+      <DependentUpon>truck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="truck.aspx.designer.cs">
+      <DependentUpon>truck.aspx</DependentUpon>
     </Compile>
     <Compile Include="updateagent.aspx.cs">
       <DependentUpon>updateagent.aspx</DependentUpon>

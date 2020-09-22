@@ -338,3 +338,6 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/truck.aspx
+/truck.aspx.cs
+/truck.aspx.designer.cs

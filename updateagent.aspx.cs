@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.X.XDevAPI.Common;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -20,14 +21,16 @@ namespace project
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if (AgentCheck())
-            {
-                updateAgent();
-            }
-            else
-            {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Author does not exists')", true);
-            }
+            
+                if (AgentCheck())
+                {
+                    updateAgent();
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Agent does not exists')", true);
+                }
+          
         }
         protected void Button2_Click(object sender, EventArgs e)
         {
