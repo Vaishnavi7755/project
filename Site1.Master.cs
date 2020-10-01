@@ -35,9 +35,9 @@ namespace project
 
                     LinkButton3.Visible = true; //logout
                     LinkButton7.Visible = true; //hello agent
-                    LinkButton7.Text = "Hello " + Session["username"].ToString();
+                    
 
-                    LinkButton6.Visible = true; //adminlogin
+                    LinkButton6.Visible = false; //adminlogin
                     LinkButton11.Visible = false; //add agent
                     LinkButton12.Visible = false; //remove agent
                     LinkButton8.Visible = false; //salary cal
@@ -50,7 +50,52 @@ namespace project
 
                     LinkButton3.Visible = true; //logout
                     LinkButton7.Visible = true; //hello agent
-                    LinkButton7.Text = "Hello " + Session["username"].ToString();
+                    
+
+                    LinkButton6.Visible = false; //adminlogin
+                    LinkButton11.Visible = true; //add agent
+                    LinkButton12.Visible = true; //remove agent
+                    LinkButton8.Visible = true; //salary cal
+                    LinkButton2.Visible = true; //update agent
+                }
+                else if (Session["role"].Equals("home1"))
+                {
+                    LinkButton1.Visible = false; //userlogin
+                    LinkButton4.Visible = false; //enquiry
+
+                    LinkButton3.Visible = true; //logout
+                    LinkButton7.Visible = true; //hello agent
+                    
+
+                    LinkButton6.Visible = false; //adminlogin
+                    LinkButton11.Visible = false; //add agent
+                    LinkButton12.Visible = false; //remove agent
+                    LinkButton8.Visible = false; //salary cal
+                    LinkButton2.Visible = false; //update agent
+                }
+                else if (Session["role"].Equals("add"))
+                {
+                    LinkButton1.Visible = false; //userlogin
+                    LinkButton4.Visible = false; //enquiry
+
+                    LinkButton3.Visible = true; //logout
+                    LinkButton7.Visible = true; //hello agent
+                    
+
+                    LinkButton6.Visible = false; //adminlogin
+                    LinkButton11.Visible = true; //add agent
+                    LinkButton12.Visible = true; //remove agent
+                    LinkButton8.Visible = true; //salary cal
+                    LinkButton2.Visible = true; //update agent
+                }
+                else if (Session["role"].Equals("update"))
+                {
+                    LinkButton1.Visible = false; //userlogin
+                    LinkButton4.Visible = false; //enquiry
+
+                    LinkButton3.Visible = true; //logout
+                    LinkButton7.Visible = true; //hello agent
+                    
 
                     LinkButton6.Visible = false; //adminlogin
                     LinkButton11.Visible = true; //add agent

@@ -16,6 +16,7 @@ namespace project
         protected void Page_Load(object sender, EventArgs e)
         {
             GridView2.DataBind();
+            Session["role"] = "admin";
         }
 
         protected void Button2_Click(object sender, EventArgs e)
@@ -89,6 +90,11 @@ namespace project
             {
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + ex.Message + "')", true);
             }
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

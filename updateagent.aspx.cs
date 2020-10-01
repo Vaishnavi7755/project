@@ -17,6 +17,7 @@ namespace project
         protected void Page_Load(object sender, EventArgs e)
         {
             GridView2.DataBind();
+            Session["role"] = "update";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -32,6 +33,7 @@ namespace project
                 }
           
         }
+        //go button
         protected void Button2_Click(object sender, EventArgs e)
         {
             getAgentById();

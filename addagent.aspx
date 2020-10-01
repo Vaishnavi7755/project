@@ -139,7 +139,7 @@
                                         <asp:ListItem Text="Uttarakhand" Value="Uttarakhand" />
                                         <asp:ListItem Text="West Bengal" Value="West Bengal" />
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Select state." ControlToValidate="DropDownList1" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Select state." InitialValue="-1" ControlToValidate="DropDownList1" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
                                 </div>
                             </div>
                             <div class="col-md-4">

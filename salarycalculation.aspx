@@ -160,7 +160,7 @@
                             <div class="col-8 mx-auto">
                                 <centre>
                                  <div class="form-group">
-                                  <asp:Button ID="Button3" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Submit" />
+                                  <asp:Button ID="Button3" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Submit" OnClick="Button3_Click" />
                               </div>
                                     </centre>
                             </div>

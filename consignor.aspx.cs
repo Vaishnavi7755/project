@@ -16,6 +16,7 @@ namespace project
         protected void Page_Load(object sender, EventArgs e)
         {
             GridView2.DataBind();
+            Session["role"] = "home1";
         }
 
         protected void Button1_Click(object sender, EventArgs e)

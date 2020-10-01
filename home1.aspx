@@ -8,22 +8,22 @@
             <div class="col-4 mx-auto">
                 <centre>
                   <div class="form-group">
-                      <a href="consignee.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button1" type="button" value="Add Consignee" style="margin-top:20px;" /></a>
+                      <a href="consignee.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button1" type="button" value="Manage Consignee" style="margin-top:20px;" /></a>
                   </div>
                 </centre>
                 <centre>
                   <div class="form-group">
-                      <a href="consignor.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button2" type="button" value="Add Consignor" /></a>
+                      <a href="consignor.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button2" type="button" value="Manage Consignor" /></a>
                   </div>
                 </centre>
                 <centre>
                   <div class="form-group">
-                      <a href="enquiry.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button3" type="button" value="Add Truck Details" /></a>
+                      <a href="truck.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button3" type="button" value="Manage Truck Details" /></a>
                   </div>
                 </centre>
                 <centre>
                   <div class="form-group">
-                      <a href="enquiry.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button4" type="button" value="Add Bill" /></a>
+                      <a href="bill.aspx"><input class="btn btn-danger btn-block btn-lg" id="Button4" type="button" value="Add or Update Bill" /></a>
                   </div>
                 </centre>
                 <centre>
