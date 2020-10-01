@@ -124,6 +124,7 @@
   <ItemGroup>
     <Content Include="addagent.aspx" />
     <Content Include="adminlogin.aspx" />
+    <Content Include="bill.aspx" />
     <Content Include="bootstrap\css\bootstrap.min.css" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bootstrap\js\jquery-3.5.1.slim.min.js" />
@@ -1826,6 +1827,7 @@
     <Content Include="Stock\updateuser.png" />
     <Content Include="Stock\usha.png" />
     <Content Include="Stock\visit.png" />
+    <Content Include="Stock\vtpl.png" />
     <Content Include="style.css" />
     <Content Include="truck.aspx" />
     <Content Include="updateagent.aspx" />
@@ -1848,6 +1850,13 @@
     </Compile>
     <Compile Include="adminlogin.aspx.designer.cs">
       <DependentUpon>adminlogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bill.aspx.cs">
+      <DependentUpon>bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bill.aspx.designer.cs">
+      <DependentUpon>bill.aspx</DependentUpon>
     </Compile>
     <Compile Include="branches.aspx.cs">
       <DependentUpon>branches.aspx</DependentUpon>
