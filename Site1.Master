@@ -101,7 +101,8 @@
                             <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="False" CausesValidation="False">Remove Agent  </asp:LinkButton>
                             &nbsp;
                             <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click" Visible="False" CausesValidation="False">Salary calculation</asp:LinkButton>
-
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click" Visible="False" CausesValidation="False">Monthly Salary Report</asp:LinkButton>
                         </p>
                     </div>
                 </div>

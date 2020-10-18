@@ -12,11 +12,12 @@
             //$('.table1').DataTable();
         });
     </script>
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-6">
                 <div class="card" style="margin-bottom: 10px; margin-top: 10px;">
                     <div class="card-body">
                         <div class="row">
@@ -39,10 +40,10 @@
                             <div class="col-md-4">
                                 <label>Agent ID:</label>
                                 <div class="form-group">
-                                    <div class="input-group">
+                                    <div class="auto-style1">
                                         <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Agent ID">
                                         </asp:TextBox>
-                                        <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Go" />
+                                        <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Go" OnClick="Button1_Click" />
                                     </div>
                                 </div>
                             </div>
@@ -54,12 +55,22 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <centre>
                                 <label>Basic salary:</label>
                               <div class="form-group">
                                   <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Basic" TextMode="Number">
+                                  </asp:TextBox>
+                              </div>
+                                 </centre>
+                            </div>
+                            <div class="col-md-6">
+                                <centre>
+                                <label>Date</label>
+                              <div class="form-group">
+                                  <asp:TextBox CssClass="form-control" ID="TextBox12" runat="server" placeholder="Basic" TextMode="Date">
                                   </asp:TextBox>
                               </div>
                                  </centre>
@@ -129,19 +140,10 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-8 mx-auto">
-                                <centre>
-                                 <div class="form-group">
-                                  <asp:Button ID="Button2" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Calculate" OnClick="Button2_Click" />
-                              </div>
-                                    </centre>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-md-8">
                                 <label>Net Salary:</label>
                                 <div class="form-group">
-                                    <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Net Salary" TextMode="Number" ReadOnly="True">
+                                    <asp:TextBox CssClass="form-control" ID="TextBox10" runat="server" placeholder="Net Salary" TextMode="Number">
                                     </asp:TextBox>
                                 </div>
                             </div>
@@ -160,7 +162,17 @@
                             <div class="col-8 mx-auto">
                                 <centre>
                                  <div class="form-group">
-                                  <asp:Button ID="Button3" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Submit" OnClick="Button3_Click" />
+                                  <asp:Button ID="Button2" CssClass="btn btn-success btn-block btn-lg" runat="server" Text="Add" OnClick="Button2_Click" />
+                              </div>
+                                    </centre>
+                            </div>
+                         
+                        </div>
+
+                        <div class="row">
+                            <div class="col-8 mx-auto">
+                                <centre>
+                                 <div class="form-group">
                               </div>
                                     </centre>
                             </div>
@@ -171,7 +183,7 @@
                 <br />
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <div class="card" style="margin-bottom: 10px; margin-top: 10px;">
                     <div class="card-body">
                         <div class="row">
@@ -188,22 +200,23 @@
                         <div class="row">
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:visualtransportConnectionString %>" SelectCommand="SELECT * FROM [salary]"></asp:SqlDataSource>
                             <div class="col">
-                                <div style="overflow-x: auto; width: 500px">
+                                <div style="overflow-x: auto; width: 680px">
                                     <div class="overflow-auto">
-                                        <asp:GridView CssClass="table table-striped table-bordered" ID="GridView2" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+                                        <asp:GridView CssClass="table table-striped table-bordered" ID="GridView2" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" style="margin-right: 0px">
                                             <Columns>
-                                                <asp:BoundField DataField="agentid" HeaderText="Agent ID" SortExpression="agentid" />
-                                                <asp:BoundField DataField="aname" HeaderText="Name" SortExpression="aname" />
-                                                <asp:BoundField DataField="bsalary" HeaderText="Basic salary" SortExpression="bsalary" />
-                                                <asp:BoundField DataField="da" HeaderText="DA" SortExpression="da" />
-                                                <asp:BoundField DataField="hra" HeaderText="HRA" SortExpression="hra" />
-                                                <asp:BoundField DataField="ma" HeaderText="MA" SortExpression="ma" />
-                                                <asp:BoundField DataField="pf" HeaderText="PF" SortExpression="pf" />
-                                                <asp:BoundField DataField="pt" HeaderText="PT" SortExpression="pt" />
-                                                <asp:BoundField DataField="it" HeaderText="IT" SortExpression="it" />
-                                                <asp:BoundField DataField="commission" HeaderText="Commission" SortExpression="commission" />
-                                                <asp:BoundField DataField="netsalary" HeaderText="Net Salary" SortExpression="netsalary" />
-                                                <asp:BoundField DataField="status" HeaderText="Status" SortExpression="status" />
+                                                <asp:BoundField DataField="agentid" HeaderText="agentid" SortExpression="agentid" />
+                                                <asp:BoundField DataField="aname" HeaderText="aname" SortExpression="aname" />
+                                                <asp:BoundField DataField="date" HeaderText="date" SortExpression="date" />
+                                                <asp:BoundField DataField="bsalary" HeaderText="bsalary" SortExpression="bsalary" />
+                                                <asp:BoundField DataField="da" HeaderText="da" SortExpression="da" />
+                                                <asp:BoundField DataField="hra" HeaderText="hra" SortExpression="hra" />
+                                                <asp:BoundField DataField="ma" HeaderText="ma" SortExpression="ma" />
+                                                <asp:BoundField DataField="pf" HeaderText="pf" SortExpression="pf" />
+                                                <asp:BoundField DataField="pt" HeaderText="pt" SortExpression="pt" />
+                                                <asp:BoundField DataField="it" HeaderText="it" SortExpression="it" />
+                                                <asp:BoundField DataField="commission" HeaderText="commission" SortExpression="commission" />
+                                                <asp:BoundField DataField="netsalary" HeaderText="netsalary" SortExpression="netsalary" />
+                                                <asp:BoundField DataField="status" HeaderText="status" SortExpression="status" />
                                             </Columns>
                                         </asp:GridView>
                                     </div>

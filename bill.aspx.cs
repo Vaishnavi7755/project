@@ -42,7 +42,11 @@ namespace project
                     {
                         con.Open();
                     }
-                    SqlCommand cmd = new SqlCommand("insert into bill (GRNo,Date,from,to,crid,crname,cid,cname,package,description,HSNcode,privatemark,invoiceno,value,truckid,paymentmode,actual,charged,amount) values (@GRNo,@Date,@from,@to,@crid,@crname,@cid,@cname,@package,@description,@HSNcode,@privatemark,@invoiceno,@value,@truckid,@paymentmode,@actual,@charged,@amount);", con);
+                    SqlCommand cmd = new SqlCommand("insert into bill (GRNo,Date,from,to,crid,crname,cid,cname" +
+                        ",package,description,HSNcode,privatemark,invoiceno,value,truckid,paymentmode,actual" +
+                        ",charged,amount) values(@GRNo,@Date,@from,@to,(select crid from Consignor where crid=@crid),(select crname from Consignor where crid=@crid),(select cid from Consignee where cid=@cid),(select cname from Consignee where cid=@cid),@package" +
+                        ",@description,@HSNcode,@privatemark,@invoiceno,@value,@truckid,@paymentmode,@actual" +
+                        ",@charged,@amount);", con);
                     try
                     {
                         cmd.Parameters.AddWithValue("@GRNo", TextBox1.Text.Trim());

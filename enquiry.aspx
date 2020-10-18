@@ -28,6 +28,8 @@
                               <div class="form-group">
                                   <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Full Name">
                                   </asp:TextBox>
+                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox1" ErrorMessage="Name cannot be empty" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator7" runat="server" ControlToValidate="TextBox1" ErrorMessage="Name can only have alphabets in it." ForeColor="Red" ValidationExpression="[a-zA-Z][a-zA-Z ]+[a-zA-Z]$" Display="Dynamic"></asp:RegularExpressionValidator>
                               </div>
                             </div>
                              <div class="col-md-6">
@@ -35,6 +37,7 @@
                               <div class="form-group">
                                   <asp:TextBox CssClass="form-control" ID="TextBox2" runat="server" placeholder="Date" TextMode="Date">
                                   </asp:TextBox>
+                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter a date." ControlToValidate="TextBox2" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
                               </div>
                             </div>
                         </div>
@@ -44,6 +47,9 @@
                               <div class="form-group">
                                   <asp:TextBox CssClass="form-control" ID="TextBox3" runat="server" placeholder="Contact number" TextMode="SingleLine">
                                   </asp:TextBox>
+                                  <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Contact number cannot be empty." ControlToValidate="TextBox3" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Mobile number can only start with 7,8,9 or 6 and can only have 10 digits." ControlToValidate="TextBox3" ForeColor="Red" ValidationExpression="^[6789]\d{9}$" Display="Dynamic"></asp:RegularExpressionValidator>
+                     
                               </div>
                             </div>
                              <div class="col-md-6">
@@ -51,6 +57,8 @@
                               <div class="form-group">
                                   <asp:TextBox CssClass="form-control" ID="TextBox4" runat="server" placeholder="Email ID" TextMode="Email">
                                   </asp:TextBox>
+                                   <asp:RegularExpressionValidator ID="RegularExpressionValidator4" runat="server" ErrorMessage="Invalid email" ControlToValidate="TextBox4" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
+                    
                               </div>
                             </div>
                         </div>
@@ -91,18 +99,26 @@
                               <asp:ListItem Text="Uttarakhand" Value="Uttarakhand" />
                               <asp:ListItem Text="West Bengal" Value="West Bengal" />
                               </asp:DropDownList>
+                              <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Select state." InitialValue="-1" ControlToValidate="DropDownList1" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+
                               </div>
                             </div>
                              <div class="col-md-4">
                         <label>City</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox6" runat="server" placeholder="City"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ErrorMessage="Enter a city." ControlToValidate="TextBox6" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator5" runat="server" ErrorMessage="Enter valid city." ControlToValidate="TextBox6" ForeColor="Red" ValidationExpression="^[a-zA-Z'@&amp;#.\s]{1,50}$" Display="Dynamic"></asp:RegularExpressionValidator>
+                               
                         </div>
                      </div>
                      <div class="col-md-4">
                         <label>Pincode</label>
                         <div class="form-group">
                            <asp:TextBox class="form-control" ID="TextBox7" runat="server" placeholder="Pincode" TextMode="Number"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Please enter a pincode." ControlToValidate="TextBox7" ForeColor="Red" Display="Dynamic"></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator6" runat="server" ErrorMessage="Pincode can only have 6 digits." ControlToValidate="TextBox7" ForeColor="Red" ValidationExpression="^[0-9]{6,6}$" Display="Dynamic"></asp:RegularExpressionValidator>
+            
                         </div>
                      </div>
                         </div>
@@ -111,6 +127,7 @@
                         <label>Enquiry Question:</label>
                         <div class="form-group">
                            <asp:TextBox CssClass="form-control" ID="TextBox5" runat="server" placeholder="Enquiry" TextMode="MultiLine" Rows="3"></asp:TextBox>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Enquiry cannot be empty." ControlToValidate="TextBox5" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
                         </div>
                      </div>
                   </div>

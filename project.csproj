@@ -34,6 +34,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>MixedRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -156,6 +157,8 @@
     <Content Include="profile.aspx" />
     <Content Include="removeagent.aspx" />
     <Content Include="salarycalculation.aspx" />
+    <Content Include="Salaryrep.aspx" />
+    <Content Include="salaryreport1.aspx" />
     <Content Include="services.aspx" />
     <Content Include="Stock\aboutus.png" />
     <Content Include="Stock\addagent.png" />
@@ -1813,6 +1816,7 @@
     <Content Include="Stock\okaya.png" />
     <Content Include="Stock\relaxo.jpg" />
     <Content Include="Stock\removeagent.png" />
+    <Content Include="Stock\report.png" />
     <Content Include="Stock\salarycal.png" />
     <Content Include="Stock\services.png" />
     <Content Include="Stock\siyarams.png" />
@@ -1955,6 +1959,20 @@
     <Compile Include="salarycalculation.aspx.designer.cs">
       <DependentUpon>salarycalculation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Salaryrep.aspx.cs">
+      <DependentUpon>Salaryrep.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Salaryrep.aspx.designer.cs">
+      <DependentUpon>Salaryrep.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="salaryreport1.aspx.cs">
+      <DependentUpon>salaryreport1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="salaryreport1.aspx.designer.cs">
+      <DependentUpon>salaryreport1.aspx</DependentUpon>
+    </Compile>
     <Compile Include="services.aspx.cs">
       <DependentUpon>services.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2075,6 +2093,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="salaryreport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

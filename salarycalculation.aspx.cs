@@ -70,7 +70,13 @@ namespace project
                 {
                     con.Open();
                 }
-                SqlCommand cmd = new SqlCommand("update salary set @netsalary= (select sum(cast(@bsalary+@da+@hra+@ma+@pf+@pt+@it+@commission as float)) from salary) where agentid='" + TextBox1.Text.Trim() + "'", con);
+              
+                SqlCommand cmd = new SqlCommand("insert into salary(agentid,aname,date,bsalary,da,hra,ma,pf" +
+                    ",pt,it,commission,netsalary,status) values((select agentid from agent where agentid=@agentid),(select aname from agent where agentid=@agentid)" +
+                    ",@date,@bsalary,@da,@hra,@ma,@pf,@pt,@it,@commission,@netsalary,@status)", con);
+                cmd.Parameters.AddWithValue("@agentid", TextBox1.Text.Trim());
+                cmd.Parameters.AddWithValue("@aname", TextBox2.Text.Trim());
+                cmd.Parameters.AddWithValue("@date", TextBox12.Text.Trim());
                 cmd.Parameters.AddWithValue("@bsalary", TextBox3.Text.Trim());
                 cmd.Parameters.AddWithValue("@da", TextBox4.Text.Trim());
                 cmd.Parameters.AddWithValue("@hra", TextBox5.Text.Trim());
@@ -80,10 +86,12 @@ namespace project
                 cmd.Parameters.AddWithValue("@it", TextBox9.Text.Trim());
                 cmd.Parameters.AddWithValue("@commission", TextBox11.Text.Trim());
                 cmd.Parameters.AddWithValue("@netsalary", TextBox10.Text.Trim());
-                cmd.Parameters.AddWithValue("@status", TextBox7.Text.Trim());
+                cmd.Parameters.AddWithValue("@status", DropDownList1.SelectedItem.Value);
                 cmd.ExecuteNonQuery();
+                
                 con.Close();
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Salary Updated Successfully!')", true);
+                clearForm();
                 GridView2.DataBind();
             }
             catch (Exception ex)
@@ -91,10 +99,57 @@ namespace project
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + ex.Message + "')", true);
             }
         }
-
-        protected void Button3_Click(object sender, EventArgs e)
+        void clearForm()
         {
+            TextBox1.Text = "";
+            TextBox2.Text = "";
+            TextBox3.Text = "";
+            TextBox4.Text = "";
+            TextBox5.Text = "";
+            TextBox6.Text = "";
+            TextBox7.Text = "";
+            TextBox8.Text = "";
+            TextBox9.Text = "";
+            TextBox10.Text = "";
+            TextBox11.Text = "";
+            TextBox12.Text = "";
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            getAgentById();
+        }
+        void getAgentById()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(strcon);
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("SELECT * from agent where agentid='" + TextBox1.Text.Trim() + "';", con);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count >= 1)
+                {
+                    TextBox2.Text = dt.Rows[0][1].ToString();
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Invalid agent ID')", true);
+                }
+            }
+            catch (Exception ex)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('" + ex.Message + "')", true);
+            }
+        }
+
+       
     }
 }

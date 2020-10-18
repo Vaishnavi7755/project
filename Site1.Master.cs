@@ -26,6 +26,7 @@ namespace project
                     LinkButton12.Visible = false; //remove agent
                     LinkButton8.Visible = false; //salary cal
                     LinkButton2.Visible = false; //update agent
+                    LinkButton5.Visible = false; //salary report
 
                 }
                 else if(Session["role"].Equals("user"))
@@ -42,6 +43,7 @@ namespace project
                     LinkButton12.Visible = false; //remove agent
                     LinkButton8.Visible = false; //salary cal
                     LinkButton2.Visible = false; //update agent
+                    LinkButton5.Visible = false; //salary report
                 }
                 else if (Session["role"].Equals("admin"))
                 {
@@ -57,6 +59,7 @@ namespace project
                     LinkButton12.Visible = true; //remove agent
                     LinkButton8.Visible = true; //salary cal
                     LinkButton2.Visible = true; //update agent
+                    LinkButton5.Visible = true; //salary report
                 }
                 else if (Session["role"].Equals("home1"))
                 {
@@ -72,6 +75,7 @@ namespace project
                     LinkButton12.Visible = false; //remove agent
                     LinkButton8.Visible = false; //salary cal
                     LinkButton2.Visible = false; //update agent
+                    LinkButton5.Visible = false; //salary report
                 }
                 else if (Session["role"].Equals("add"))
                 {
@@ -87,6 +91,7 @@ namespace project
                     LinkButton12.Visible = true; //remove agent
                     LinkButton8.Visible = true; //salary cal
                     LinkButton2.Visible = true; //update agent
+                    LinkButton5.Visible = true; //salary report
                 }
                 else if (Session["role"].Equals("update"))
                 {
@@ -102,6 +107,7 @@ namespace project
                     LinkButton12.Visible = true; //remove agent
                     LinkButton8.Visible = true; //salary cal
                     LinkButton2.Visible = true; //update agent
+                    LinkButton5.Visible = true; //salary report
                 }
             }
             catch(Exception ex)
@@ -152,6 +158,7 @@ namespace project
             LinkButton12.Visible = false; //remove agent
             LinkButton8.Visible = false; //salary cal
             LinkButton2.Visible = false; //update agent
+            LinkButton5.Visible = false; //salary report
             Response.Redirect("homepage.aspx");
         }
 
@@ -168,6 +175,11 @@ namespace project
         protected void LinkButton2_Click(object sender, EventArgs e)
         {
             Response.Redirect("updateagent.aspx");
+        }
+
+        protected void LinkButton5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("salaryreport1.aspx");
         }
     }
 }
